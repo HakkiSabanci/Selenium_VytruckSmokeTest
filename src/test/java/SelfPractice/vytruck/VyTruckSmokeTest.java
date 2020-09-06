@@ -16,7 +16,7 @@ public class VyTruckSmokeTest {
     public static void main(String[] args) throws InterruptedException, IOException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-
+        //"C:/Users/catzi/OneDrive/Desktop/test"
         //ScreenShot Directory's path: C:/Users/catzi/OneDrive/Desktop/VYtruck smoke test
 
         driver.get("https://qa2.vytrack.com/user/login");
@@ -58,6 +58,7 @@ public class VyTruckSmokeTest {
 
         //Actions Class: code block to simulate mouseHover and display options on fleet module
         // to get the xpath: when you inspecting a module you will see three dots right side of the html code click>copy>copy xpath
+
 
         Actions actions = new Actions(driver);
 

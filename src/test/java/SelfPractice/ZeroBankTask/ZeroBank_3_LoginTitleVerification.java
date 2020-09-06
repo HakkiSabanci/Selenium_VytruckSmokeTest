@@ -33,7 +33,7 @@ public class ZeroBank_3_LoginTitleVerification {
 
         driver.get("http://zero.webappsecurity.com/login.html");
 
-        driver.findElement(By.name("user_login")).sendKeys("username");
+        driver.findElement(By.xpath("//*[@id=\"user_login\"]")).sendKeys("username");
 
         driver.findElement(By.name("user_password")).sendKeys("password"+ Keys.ENTER);
 
