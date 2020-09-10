@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
 public class VytruckData {
+
     static String vyTruckUrl;
     static String truckDriverUserName;
     static String storeManagerUserName;
@@ -33,7 +35,6 @@ public class VytruckData {
     }
 
     public static WebDriver getDriver(String browserType){
-
         if (browserType.equalsIgnoreCase("chrome")){
             //System.setProperty("webdriver.chrome.driver", "path");
 
@@ -49,4 +50,6 @@ public class VytruckData {
         }
 
     }
+
+
 }
