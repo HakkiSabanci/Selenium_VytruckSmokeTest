@@ -1,13 +1,20 @@
 package SelfPractice.vytruck;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDate;
+
 
 public class VytruckData {
-
+     String browserType;
     static String vyTruckUrl;
     static String truckDriverUserName;
     static String storeManagerUserName;
@@ -35,6 +42,7 @@ public class VytruckData {
     }
 
     public static WebDriver getDriver(String browserType){
+        //this.browserType=browserType;
         if (browserType.equalsIgnoreCase("chrome")){
             //System.setProperty("webdriver.chrome.driver", "path");
 
@@ -51,5 +59,15 @@ public class VytruckData {
 
     }
 
+    /*public File screenShotAsDriver(File nameOfFile,String screenShotName) throws IOException {
+        WebDriver driver = getDriver(browserType);
+        nameOfFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(nameOfFile, new File(truckDriverScreenShotPath+"/"+screenShotName+" "+ LocalDate.now()+".png");
+        return nameOfFile;
+    }*/
+/*
+File loggedOutPagePic = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(loggedOutPagePic, new File(truckDriverScreenShotPath+"/LoggedOutPagePic "+ LocalDate.now()+ ".png"));
+ */
 
 }

@@ -3,6 +3,7 @@ package SelfPractice.vytruck;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+
 import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 
 public class VyTruckSmokeTest extends VytruckData{
     public static void truckDriver() throws InterruptedException, IOException {
+        //WebDriver driver = new ChromeDriver();
         WebDriver driver=getDriver("chrome");
         //"C:/Users/catzi/OneDrive/Desktop/test"
         //ScreenShot Directory's path: C:/Users/catzi/OneDrive/Desktop/VYtruck Truck Driver smoke test
@@ -152,10 +154,12 @@ public class VyTruckSmokeTest extends VytruckData{
     }
 
     public static void storeManager() throws InterruptedException, IOException {
+       // WebDriver driver = new ChromeDriver();
         WebDriver driver=getDriver("chrome");
         //"C:/Users/catzi/OneDrive/Desktop/test"
         //ScreenShot Directory's path: C:/Users/catzi/OneDrive/Desktop/VYtruck Truck Driver smoke test
 
+        assert driver != null;
         driver.get(vyTruckUrl);
         driver.manage().window().maximize();
 
@@ -291,6 +295,7 @@ public class VyTruckSmokeTest extends VytruckData{
     }
 
     public static void salesManager() throws InterruptedException, IOException {
+       // WebDriver driver = new ChromeDriver();
         WebDriver driver=getDriver("chrome");
 
         //ScreenShot Directory's path: C:/Users/catzi/OneDrive/Desktop/VYtruck Sales Manager smoke test
