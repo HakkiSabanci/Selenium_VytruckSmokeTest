@@ -31,24 +31,18 @@ public class TC_4 {
         //5. Deselect all values.
         List<WebElement> listOfLanguages = driver.findElements(By.name("Languages"));
         Select multipleLanguages = new Select(driver.findElement(By.name("Languages")));
-        Thread.sleep(2000);
-        multipleLanguages.selectByValue("java");
+
+        for(int i =0; i<6;i++){
+        multipleLanguages.selectByIndex(i);
         Thread.sleep(1000);
-        multipleLanguages.selectByValue("js");
-        Thread.sleep(1000);
-        multipleLanguages.selectByValue("c#");
-        Thread.sleep(1000);
-        multipleLanguages.selectByValue("python");
-        Thread.sleep(1000);
-        multipleLanguages.selectByValue("ruby");
-        Thread.sleep(1000);
-        multipleLanguages.selectByValue("c");
+        }
         Thread.sleep(2000);
         for (WebElement eachElement: listOfLanguages){
             System.out.println(eachElement.getText());
         }
         Thread.sleep(1000);
         multipleLanguages.deselectAll();
+        Thread.sleep(2000);
     }
     @AfterMethod
     public void tearDownDriver(){
