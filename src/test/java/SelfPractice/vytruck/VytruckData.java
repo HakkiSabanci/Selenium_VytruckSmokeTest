@@ -39,6 +39,7 @@ public class VytruckData {
         salesManagerUserName="salesmanager271";
         salesManagerPassword="UserUser123";
         salesManagerScreenShotPath="C:/Users/catzi/OneDrive/Desktop/VYtruck Sales Manager smoke test";
+                                 //"C:/Users/catzi/OneDrive/Desktop/New folder"
     }
 
     public static WebDriver getDriver(String browserType){
